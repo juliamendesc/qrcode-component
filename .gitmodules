@@ -1,0 +1,3 @@
+[submodule "Huddle-site-cloning"]
+	path = Huddle-site-cloning
+	url = git@github.com:juliamendesc/Huddle-site-cloning.git
