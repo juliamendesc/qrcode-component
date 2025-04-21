@@ -62,9 +62,18 @@ body {
   padding: 1rem;
 }
 
-.cardImg {
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+  padding: 1rem;
   width: 288px;
   height: auto;
+}
+
+.cardImg {
   max-height: 288px;
   border-radius: 0.5rem;
 }
@@ -86,13 +95,4 @@ body {
   letter-spacing: var(--typography-body-letter-spacing);
   line-height: var(--typography-body-line-height);
   color: var(--colors-slate-500);
-}
-
-.cardContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  gap: 1rem;
-  padding: 1rem;
 }
