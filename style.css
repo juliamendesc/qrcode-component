@@ -59,7 +59,7 @@ body {
   background-color: var(--colors-white);
   width: 320px;
   height: 499px;
-  border-radius: 1.25rem;
+  border-radius: 1rem;
   padding: 1rem;
 }
 
