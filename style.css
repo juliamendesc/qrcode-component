@@ -55,7 +55,6 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: space-around;
   background-color: var(--colors-white);
   width: 320px;
   height: 499px;
@@ -87,4 +86,13 @@ body {
   letter-spacing: var(--typography-body-letter-spacing);
   line-height: var(--typography-body-line-height);
   color: var(--colors-slate-500);
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+  padding: 1rem;
 }
