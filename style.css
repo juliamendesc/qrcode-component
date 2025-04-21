@@ -55,11 +55,12 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
+  justify-content: space-around;
   background-color: var(--colors-white);
   width: 320px;
   height: 499px;
   border-radius: 1.25rem;
-  padding: 1.2rem;
+  padding: 1rem;
 }
 
 .cardImg {
@@ -77,7 +78,6 @@ body {
   line-height: var(--typography-heading-line-height);
   color: var(--colors-slate-900);
   text-wrap: balance;
-  padding: 0.8rem;
 }
 
 .textContainer {
@@ -87,5 +87,4 @@ body {
   letter-spacing: var(--typography-body-letter-spacing);
   line-height: var(--typography-body-line-height);
   color: var(--colors-slate-500);
-  padding: 0.8rem;
 }
