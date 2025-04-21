@@ -78,7 +78,7 @@ body {
   border-radius: 0.5rem;
 }
 
-.headingContainer {
+h1 {
   text-align: center;
   font-size: var(--typography-heading-font-size);
   font-weight: var(--typography-heading-font-weight);
