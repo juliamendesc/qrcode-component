@@ -1,0 +1,92 @@
+/* This is a CSS file that defines the styles for a web page. 
+It includes styles for the body, headings, and paragraphs, 
+as well as custom properties (CSS variables) for colors, spacing, and typography. */
+
+:root {
+  --font-family: "Outfit", sans-serif;
+  --colors-slate-900: #1f314f;
+  --colors-slate-500: #68778d;
+  --colors-slate-300: #d5e1ef;
+  --colors-white: #ffffff;
+  --spacing-500: 40px;
+  --spacing-300: 24px;
+  --spacing-200: 16px;
+
+  --typography-heading-line-height: 1.2;
+  --typography-heading-font-size: 22px;
+  --typography-heading-font-weight: bold;
+  --typography-heading-letter-spacing: 0px;
+
+  --typography-body-line-height: 1.4;
+  --typography-body-font-size: 15px;
+  --typography-body-font-weight: 400;
+  --typography-body-letter-spacing: 0.2px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--colors-slate-300);
+  font-size: 16px;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: var(--colors-white);
+  width: 320px;
+  height: 499px;
+  border-radius: 1.25rem;
+  box-shadow: 0px 5px 5px 0px var(--colors-slate-500);
+  padding: 1rem;
+}
+
+.cardImg {
+  width: 288px;
+  height: auto;
+  max-height: 288px;
+  border-radius: 1.25rem;
+}
+
+.headingContainer {
+  text-align: center;
+  font-size: var(--typography-heading-font-size);
+  font-weight: var(--typography-heading-font-weight);
+  letter-spacing: var(--typography-heading-letter-spacing);
+  line-height: var(--typography-heading-line-height);
+  color: var(--colors-slate-900);
+  text-wrap: balance;
+  padding: 1rem;
+}
+
+.textContainer {
+  text-align: center;
+  font-size: var(--typography-body-font-size);
+  font-weight: var(--typography-body-font-weight);
+  letter-spacing: var(--typography-body-letter-spacing);
+  line-height: var(--typography-body-line-height);
+  color: var(--colors-slate-500);
+  padding: 1rem;
+}
