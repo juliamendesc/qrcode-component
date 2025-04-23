@@ -16,6 +16,10 @@ const textContainerInput = document.getElementById("textContainerInput");
 let qrUrl = "";
 
 // const addClickListener = document.addEventListener("click", clickListener);
+// const enterKeyListener = document.addEventListener(
+//   "keydown",
+//   enterListener
+// );
 
 const qrCode = new QRCode(qrElement, {
   text: qrUrl,
