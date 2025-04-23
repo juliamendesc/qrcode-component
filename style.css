@@ -34,11 +34,14 @@ as well as custom properties (CSS variables) for colors, spacing, and typography
 body {
   height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--colors-slate-300);
   font-size: 16px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 footer {
