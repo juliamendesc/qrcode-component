@@ -22,19 +22,38 @@
   </head>
 
   <body>
-    <main class="container">
-      <img src="./images/image-qr-code.png" alt="QR code" class="cardImg" />
+    <main>
+      <section class="container">
+        <img src="./images/image-qr-code.png" alt="QR code" class="cardImg" />
 
-      <div class="cardContainer">
-        <h1 class="heading">
-          Improve your front-end skills by building projects
-        </h1>
+        <div class="cardContainer">
+          <h1 class="heading">
+            Improve your front-end skills by building projects
+          </h1>
 
-        <p class="textContainer">
-          Scan the QR code to visit Frontend Mentor and take your coding skills
-          to the next level
-        </p>
-      </div>
+          <p class="textContainer">
+            Scan the QR code to visit Frontend Mentor and take your coding
+            skills to the next level
+          </p>
+        </div>
+      </section>
+
+      <section class="container">
+        <div id="qrcode"></div>
+
+        <div class="cardContainer">
+          <h1 class="heading">Create your own QR code?</h1>
+
+          <label for="textContainerInput" class="textContainer"
+            >Enter your URL:</label
+          >
+          <input class="textContainer" type="text" id="textContainerInput" />
+
+          <p id="errorMessage" class="error"></p>
+
+          <button class="btn" id="generateBtn">Generate QR Code</button>
+        </div>
+      </section>
     </main>
 
     <footer class="attribution">
@@ -46,4 +65,6 @@
       >.
     </footer>
   </body>
+  <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+  <script src="script.js"></script>
 </html>

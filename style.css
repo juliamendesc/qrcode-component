@@ -7,6 +7,7 @@ as well as custom properties (CSS variables) for colors, spacing, and typography
   --colors-slate-900: #1f314f;
   --colors-slate-500: #68778d;
   --colors-slate-300: #d5e1ef;
+  --colors-qrcode-background: #2979ff;
   --colors-white: #ffffff;
   --spacing-500: 40px;
   --spacing-300: 24px;
@@ -31,7 +32,7 @@ as well as custom properties (CSS variables) for colors, spacing, and typography
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,11 +41,17 @@ body {
   font-size: 16px;
 }
 
-.attribution {
-  position: absolute;
+footer {
+  align-content: flex-end;
   bottom: 10px;
   font-size: 11px;
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    background-color: var(--colors-white);
+    width: 100%;
+    padding: 1rem;
+  }
 }
 
 .attribution a {
@@ -57,7 +64,8 @@ body {
   align-content: center;
   background-color: var(--colors-white);
   width: 320px;
-  height: 499px;
+  height: auto;
+  min-height: 499px;
   border-radius: 1.2rem;
   padding: 1rem;
 }
@@ -71,11 +79,6 @@ body {
   padding: 1rem;
   width: 288px;
   height: auto;
-}
-
-.cardImg {
-  max-height: 288px;
-  border-radius: 0.5rem;
 }
 
 h1 {
@@ -95,4 +98,61 @@ h1 {
   letter-spacing: var(--typography-body-letter-spacing);
   line-height: var(--typography-body-line-height);
   color: var(--colors-slate-500);
+}
+
+input {
+  border-radius: 0.25rem;
+  border: 1px solid #68778d;
+}
+
+#qrcode {
+  background-color: var(--colors-qrcode-background);
+  border-radius: 0.5rem;
+  height: auto;
+  width: 100%;
+  min-height: 288px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 3.75rem;
+
+  @media screen and (min-width: 728px) {
+    min-height: 288px;
+    height: auto;
+  }
+}
+
+main {
+  display: flex;
+  justify-items: center;
+  padding: 1rem;
+  gap: 3rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+}
+
+.btn {
+  border-radius: 0.25rem;
+  border: 0;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.btn:hover {
+  background-color: var(--colors-slate-500);
+  color: var(--colors-white);
+}
+
+.cardImg {
+  max-height: 288px;
+  border-radius: 0.5rem;
+}
+
+#errorMessage {
+  color: red;
+  text-align: center;
 }
