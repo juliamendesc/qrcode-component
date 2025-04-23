@@ -15,6 +15,8 @@ const textContainerInput = document.getElementById("textContainerInput");
 
 let qrUrl = "";
 
+// const addClickListener = document.addEventListener("click", clickListener);
+
 const qrCode = new QRCode(qrElement, {
   text: qrUrl,
   width: 150,
@@ -37,7 +39,7 @@ function handleBadUrl() {
   }, 3000);
 }
 
-const clickListener = (event) => {
+const clickListener = document.addEventListener("click", (event) => {
   if (event.target.id !== "generateBtn") return;
 
   if (
@@ -53,11 +55,7 @@ const clickListener = (event) => {
 
   createNewQrCode(qrUrl);
   resetInput();
-
-  addClickListener.removeEventListener("click", clickListener);
-};
-
-const addClickListener = document.addEventListener("click", clickListener);
+});
 
 const enterListener = document.addEventListener("keydown", (event) => {
   if (event.key !== "Enter") return;
