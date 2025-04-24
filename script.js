@@ -13,16 +13,8 @@ const qrElement = document.getElementById("qrcode");
 const customQrCodeElement = document.getElementById("customQrCode");
 const textContainerInput = document.getElementById("textContainerInput");
 
-let qrUrl = "";
-
-// const addClickListener = document.addEventListener("click", clickListener);
-// const enterKeyListener = document.addEventListener(
-//   "keydown",
-//   enterListener
-// );
-
 const qrCode = new QRCode(qrElement, {
-  text: qrUrl,
+  text: "",
   width: 150,
   height: 100,
   colorDark: "#2979ff",
@@ -55,7 +47,7 @@ const clickListener = document.addEventListener("click", (event) => {
     return;
   }
 
-  qrUrl = textContainerInput.value;
+  const qrUrl = textContainerInput.value;
 
   createNewQrCode(qrUrl);
   resetInput();
@@ -66,7 +58,7 @@ const enterListener = document.addEventListener("keydown", (event) => {
   if (event.target.id !== textContainerInput.id) return;
 
   if (
-    !urlValidationRegex.test(qrUrl) ||
+    !urlValidationRegex.test(textContainerInput.value) ||
     (textContainerInput.value === "" &&
       event.target.id === textContainerInput.id)
   ) {
@@ -74,7 +66,7 @@ const enterListener = document.addEventListener("keydown", (event) => {
     return;
   }
 
-  qrUrl = textContainerInput.value;
+  const qrUrl = textContainerInput.value;
   createNewQrCode(qrUrl);
   resetInput();
 });
